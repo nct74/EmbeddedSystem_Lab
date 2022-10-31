@@ -21,7 +21,7 @@ void button_task(void *pvParameter)
 	gpio_set_pull_mode(BTN_GPIO, GPIO_PULLUP_ONLY);
 	while (1)
 	{
-		if (gpio_get_level(BTN_GPIO) == 1)
+		if (gpio_get_level(BTN_GPIO) == 0)
 			printf("ESP32\n");
 		vTaskDelay(1000 / portTICK_RATE_MS);
 	}
